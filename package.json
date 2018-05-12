@@ -1,0 +1,23 @@
+{
+  "name": "secondexam",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leocris26/SecondExam.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Leocris26/SecondExam/issues"
+  },
+  "homepage": "https://github.com/Leocris26/SecondExam#readme",
+  "dependencies": {
+    "grunt": "^1.0.2",
+    "grunt-contrib-concat": "^1.0.1"
+  }
+}
