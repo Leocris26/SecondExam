@@ -4,7 +4,16 @@ module.exports = function (grunt){
     var config = grunt.file.readJSON(grunt.option('CONFIG') || 'config.json');
     // var build = (grunt.option('BuildFolder') || config.buildFolder);
 
-
+    grunt.initConfig({
+        jasmine: {
+          JS: {
+            src: 'js/*.js',
+            options: {
+              specs: 'spec/*.spec.js'
+            }
+          }
+        }
+      });
 
     grunt.registerTask('templateHTML', function() {
         
