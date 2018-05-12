@@ -3,9 +3,7 @@ module.exports = function (grunt){
 
     var config = grunt.file.readJSON(grunt.option('CONFIG') || 'config.json');
     // var build = (grunt.option('BuildFolder') || config.buildFolder);
-    grunt.initConfig({
-        
-    });
+
 
 
     grunt.registerTask('templateHTML', function() {
@@ -55,5 +53,5 @@ module.exports = function (grunt){
         });
         
     });
-    grunt.registerTask('doALL', ['concatJS' , 'concatCSS' , 'templateHTML'] );
+    grunt.registerTask('doALL', ['templateHTML' , 'templatePageOne' , 'templatePageTwo', 'jasmine'] );
 }
