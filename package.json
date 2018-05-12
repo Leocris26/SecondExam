@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/Leocris26/SecondExam#readme",
   "dependencies": {
-    "grunt": "^1.0.2",
-    "grunt-contrib-concat": "^1.0.1"
+    "grunt": "^1.0.2"
   }
 }
