@@ -1,7 +1,12 @@
 module.exports = function (grunt){
     grunt.loadNpmTasks('grunt-contrib-jasmine');
 
-    var config = grunt.file.readJSON(grunt.option('CONFIG') || 'config.json');
+    var config;
+    try {
+        config = grunt.file.readJSON(grunt.option('CONFIG'));
+    } catch (error) {
+        config = grunt.file.readJSON('config.json');
+    }
     // var build = (grunt.option('BuildFolder') || config.buildFolder);
 
     grunt.initConfig({
