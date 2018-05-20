@@ -63,12 +63,23 @@ module.exports = function (grunt){
 
     grunt.registerTask('templatePageOne', function() {
         
+        grunt.file.copy('src/app/page1/page1template.ts', 'src/app/page1/page1.component.ts', {
+            process: function(files){
+                return grunt.template.process(files,
+                    {
+                        data: {
+                            htmlpath: '../../../'+config.buildFolder+'/'+config.pageOneName+'.html'
+                        }
+                    }
+                );
+            }
+        });
         grunt.file.copy('page1.html', config.buildFolder+'/'+config.pageOneName+'.html', {
             process: function(files){
                 return grunt.template.process(files,
                     {
                         data: {
-                            pageTitle: config.appName,
+                            title: 'ASDSADA',
                         }
                     }
                 );
