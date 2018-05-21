@@ -1,4 +1,12 @@
-<ul>
-    <li><a routerLink="page1">page1</a></li>
-    <li *ngIf="true"><a routerLink="page2">page2</a></li>
-</ul>
+<table>
+    <tr>
+        <td>
+            <button type="button" class="btn btn-link" (click)="onButtonClick1()">UPB Users GIT Page</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button type="button" class="btn btn-link" (click)="onButtonClick2()" *ngIf="true">Free Content Page</button>
+        </td>
+    </tr>
+</table>
