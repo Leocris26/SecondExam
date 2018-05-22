@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title><%= pageTitle %></title>
-</head>
-<body>
-    <% users.forEach(function(user){%>
-        <img src="<%=user.avatar_url %>"> 
-        <h3> <%=user.name %></h3>
-        <h3> <%=user.nickName %></h3>
-        <h3><a href="<%=user.github_url %>"><%=user.github_url %> </a></h3>
-        <%});%>
-    
-</body>
-</html>
+<% users.forEach(function(user){%>
+    <div class="card">
+        <img src="<%=user.avatar_url %>" height="200" width="200"> 
+        <h3 class="title"> <%=user.name %></h3>
+        <h3 class="title"> <%=user.nickName %></h3>
+        <h3><a href="<%=user.github_url %>"> link a la pagina </a></h3>
+    </div>
+<%});%>
