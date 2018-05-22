@@ -1,0 +1,15 @@
+h1 {
+    color: white;
+    font-family: Impact;
+    font-size: 300%;
+}
+p {
+    background-color: darkblue;
+    width: 80%;
+    border: 1px solid whitesmoke; 
+    padding: 25px;
+    margin: 25px;
+    color: white;
+    font-family: courier;
+    font-size: 160%;
+}
