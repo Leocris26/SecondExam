@@ -1,9 +1,29 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title><%= pageTitle %></title>
-</head>
-<body>
-    
-</body>
-</html>
+<div class="cover text-center align-content-center">
+    <div class="py-5 w-75 container-fluid">
+      <div class="container">
+        <div class="row">
+            <% users.forEach(function(user){%>
+          <div class="col-4">
+            <div class="card">
+              <img class="card-img-top" src="<%=user.avatar_url %>" alt="Card image cap">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <h5 style="font-weight: bold;"><%=user.name %></h5>
+                </li>
+                <li class="list-group-item">
+                  <h6><%=user.nickName %></h6>
+                </li>
+                <li class="list-group-item">
+                  <a href="<%=user.github_url %>" style="font-family: Helvetica;"> Link to my Page </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <%});%>
+        </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

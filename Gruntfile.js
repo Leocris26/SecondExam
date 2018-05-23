@@ -7,6 +7,22 @@ module.exports = function (grunt){
     } catch (error) {
         config = grunt.file.readJSON('config.json');
     }
+    var dataJ;
+    try {
+        dataJ = grunt.file.readJSON(grunt.option('DATA'));
+    } catch (error) {
+        dataJ = grunt.file.readJSON('data.json');
+    }
+    var vec = [];
+    vec = dataJ.users;
+
+    
+    for (let index = 0; index < vec.length; index++) {
+        if (vec[index].avatar_url === "") {
+            vec[index].avatar_url = "https://avatars1.githubusercontent.com/u/2649773?s=200&v=4";
+        }
+        
+    }
     // var build = (grunt.option('BuildFolder') || config.buildFolder);
 
     grunt.initConfig({
@@ -69,6 +85,7 @@ module.exports = function (grunt){
                     {
                         data: {
                             pageTitle: config.appName,
+                            users : vec
                         }
                     }
                 );
@@ -102,5 +119,5 @@ module.exports = function (grunt){
         });
         
     });
-    grunt.registerTask('doALL', ['templateHTML' , 'templatePageOne' , 'templatePageTwo', 'templateAngular'] );
+    grunt.registerTask('doALL', ['templateHTML' , 'templatePageOne' , 'templatePageTwo', 'templateAngular','jasmine'] );
 }
