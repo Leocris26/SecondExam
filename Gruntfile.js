@@ -119,5 +119,5 @@ module.exports = function (grunt){
         });
         
     });
-    grunt.registerTask('doALL', ['templateHTML' , 'templatePageOne' , 'templatePageTwo', 'templateAngular','jasmine'] );
+    grunt.registerTask('build', ['templateHTML' , 'templatePageOne' , 'templatePageTwo', 'templateAngular','jasmine'] );
 }
