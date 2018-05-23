@@ -20,13 +20,39 @@ module.exports = function (grunt){
       });
 
     grunt.registerTask('templateHTML', function() {
-        
+        grunt.file.copy('src/app/main/maintemplate.html', 'src/app/main/main.component.html', {
+            process: function(files){
+                return grunt.template.process(files,
+                    {
+                        data: {
+                            condition: config.enablePageTwoLink
+                        }
+                    }
+                );
+            }
+        });
         grunt.file.copy('index.html', config.buildFolder+'/index.html', {
             process: function(files){
                 return grunt.template.process(files,
                     {
                         data: {
                             pageTitle: config.appName,
+                        }
+                    }
+                );
+            }
+        });
+        
+    });
+
+    grunt.registerTask('templateAngular', function() {
+        
+        grunt.file.copy('a.json', 'angular.json', {
+            process: function(files){
+                return grunt.template.process(files,
+                    {
+                        data: {
+                            angularfile: config.buildFolder + "/index.html",
                         }
                     }
                 );
@@ -48,17 +74,27 @@ module.exports = function (grunt){
                 );
             }
         });
-        
     });
 
     grunt.registerTask('templatePageTwo', function() {
-        
+        grunt.file.copy('src/app/page2/page2template.ts', 'src/app/page2/page2.component.ts', {
+            process: function(files){
+                return grunt.template.process(files,
+                    {
+                        data: {
+                            htmlpath: '../../../'+config.buildFolder+'/'+config.pageTwoName+'.html'
+                        }
+                    }
+                );
+            }
+        });
         grunt.file.copy('page2.html', config.buildFolder+'/'+config.pageTwoName+'.html', {
             process: function(files){
                 return grunt.template.process(files,
                     {
                         data: {
-                            pageTitle: config.appName,
+                            title: config.freeContent.title,
+                            content: config.freeContent.body
                         }
                     }
                 );
@@ -66,5 +102,5 @@ module.exports = function (grunt){
         });
         
     });
-    grunt.registerTask('doALL', ['templateHTML' , 'templatePageOne' , 'templatePageTwo', 'jasmine'] );
+    grunt.registerTask('doALL', ['templateHTML' , 'templatePageOne' , 'templatePageTwo', 'templateAngular'] );
 }

@@ -1,6 +1,12 @@
 {
 	"buildFolder":"build",
-	"appName": "Second Exam",
+	"appName": "Second_Exam",
 	"pageOneName": "pageOne",
-	"pageTwoName": "pageTwo"
+	"pageTwoName": "pageTwo",
+	"enablePageTwoLink": true,
+	"freeContent": {
+		"title": "Page Two Title",
+		"body": "Some Cool Stuff"
+	}
 }
+

@@ -1,0 +1,16 @@
+h1 {
+    color: teal;
+    font-family: Impact;
+    font-size: 300%;
+}
+p {
+    background-color: white;
+    width: 80%;
+    border: 1px solid whitesmoke; 
+    padding: 25px;
+    margin: 25px;
+    margin-left: 120px;
+    color: tomato;
+    font-family: Helvetica;
+    font-size: 160%;
+}
