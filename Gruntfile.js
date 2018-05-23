@@ -19,7 +19,7 @@ module.exports = function (grunt){
     
     for (let index = 0; index < vec.length; index++) {
         if (vec[index].avatar_url === "") {
-            vec[index].avatar_url = "https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprodmigration%2Fweb%2Fbin%2F35f0d134-b1d0-3591-8fdb-005ce9afe21e.jpg?crop=670%2C1004%2C0%2C0&resize=685";
+            vec[index].avatar_url = "https://avatars1.githubusercontent.com/u/2649773?s=200&v=4";
         }
         
     }
