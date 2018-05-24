@@ -1,0 +1,11 @@
+{
+	"buildFolder":"web",
+	"appName": "Last Test",
+	"pageOneName": "upb-users",
+	"pageTwoName": "free-content",
+	"enablePageTwoLink": false,
+	"freeContent": {
+		"title": "T.I.T.L.E.",
+		"body": "Hello World!"
+	}
+}
